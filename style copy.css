@@ -1,0 +1,131 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url("PW.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+}
+select {
+  width: 95%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+
+header, section {
+  animation: girarDerechaIzquierda 1.5s ease;
+}
+
+section {
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  margin: 0 auto;
+  width: 60%;
+  border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+  section {
+    width: 90%;         
+    padding: 15px;
+  }
+
+  h1, h2 {
+    font-size: 20px;    
+    text-align: center;
+  }
+
+  input, select, textarea {
+    width: 100%;       
+    font-size: 16px;
+  }
+
+  button {
+    width: 100%;         
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .ticker-word {
+    font-size: 20px;     
+  }
+}
+
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 18px;
+  }
+
+  section {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .ticker-word {
+    font-size: 16px;
+  }
+}
+
+button:hover { background: #d35400; }
+
+footer { text-align: center; margin-top: 30px; }
+
+
+@keyframes girarDerechaIzquierda {
+  from { transform: rotateY(90deg); opacity: 0; }
+  to { transform: rotateY(0deg); opacity: 1; }
+}
+
+
+.ticker {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  background: #111;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.ticker-inner {
+  display: inline-block;
+  padding-left: 100%;
+  animation: mover 20s linear infinite;
+}
+
+@keyframes mover {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-100%); }
+}
+
+.ticker-word {
+  font-weight: bold;
+  font-size: 28px;
+  margin: 0 8px;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px #fff, 0 0 10px currentColor;
+  animation: parpadeo 2s infinite;
+}
+
+@keyframes parpadeo {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* Colores neón */
+.ticker-word.blue   { color: #3498db; }
+.ticker-word.green  { color: #2ecc71; }
+.ticker-word.orange { color: #e67e22; }
+.ticker-word.pink   { color: #ff007f; }
+.ticker-word.yellow { color: #f1c40f; }
+.ticker-word.purple { color: #9b59b6; }
+.ticker-word.cream  { color: #f3efe6; }
+.ticker-word.cyan   { color: #00ffff; }
+
+.ticker-sep {
+  color: #fff;
+  margin: 0 10px;
+}

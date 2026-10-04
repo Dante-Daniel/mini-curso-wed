@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Curso Web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ticker">
+    <div class="ticker-inner">
+      <span class="ticker-word blue">PROGRAMACIÓN</span>
+      <span class="ticker-word green">WEB</span>
+      <span class="ticker-word orange">CREA</span>
+      <span class="ticker-word pink">TU</span>
+      <span class="ticker-word yellow">FUTURO</span>
+      <span class="ticker-sep">✦</span>
+      <span class="ticker-word purple">INSPÍRATE</span>
+      <span class="ticker-word cream">CON</span>
+      <span class="ticker-word cyan">CÓDIGO</span>
+    </div>
+  </div>
+
+  <header class="animacion">
+    <h1>Bienvenido al Mini Curso de Programación Web</h1>
+    <p>Completa el formulario para acceder a las sesiones</p>
+  </header>
+
+  <section class="animacion">
+    <h2>Formulario de Registro</h2>
+    <form id="registroForm" onsubmit="redirigir(event)">
+      <label>Nombre y Apellido:</label><br>
+      <input type="text" id="nombre" required><br><br>
+
+      <label>Celular:</label><br>
+      <input type="tel" id="celular" pattern="^\+?[0-9]{9,15}$" required><br><br>
+
+      <label>Correo Electrónico:</label><br>
+      <input type="email" id="correo" required><br><br>
+
+      <label>Clave (exactamente 5 dígitos):</label><br>
+      <input type="password" id="clave" pattern="^[0-9]{5}$" required><br><br>
+      
+      <label for="profesor">Profesor disponible:</label>
+      <select id="profesor" name="profesor" required>
+      <option value="">-- Selecciona un profesor --</option>
+      <option value="juan">Juan Pérez</option>
+      <option value="maria">María López</option>
+      <option value="carlos">Carlos Ramírez</option>
+      <option value="ana">Ana Torres</option>
+   </select>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2026 Mini Curso Web - Dante</p>
+  </footer>
+
+  <script>
+    function redirigir(event) {
+      event.preventDefault();
+
+      const nombre = document.getElementById("nombre").value;
+      const celular = document.getElementById("celular").value;
+      const correo = document.getElementById("correo").value;
+      const clave = document.getElementById("clave").value;
+
+      localStorage.setItem("nombre", nombre);
+      localStorage.setItem("celular", celular);
+      localStorage.setItem("correo", correo);
+      localStorage.setItem("clave", clave);
+      localStorage.setItem("profesores", profesores);
+
+      window.location.href = "sesiones.html";
+    }
+  </script>
+</body>
+</html>

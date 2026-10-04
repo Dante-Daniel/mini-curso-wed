@@ -1,0 +1,101 @@
+body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #2c3e50, #3498db);
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      animation: girarDerechaIzquierda 2s;
+    }
+    section {
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
+      margin: 20px auto;
+      width: 70%;
+      border-radius: 10px;
+      animation: girarDerechaIzquierda 2s;
+    }
+    #usuario { border-left: 8px solid #f39c12; }
+    #html { border-left: 8px solid #e74c3c; }
+    #css { border-left: 8px solid #2980b9; }
+    #js { border-left: 8px solid #27ae60; }
+    #frameworks { border-left: 8px solid #8e44ad; }
+    h2 { color: #f1c40f; }
+    input, select, textarea {
+      width: 95%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: none;
+    }
+    
+@media (max-width: 768px) {
+  section {
+    width: 90%;         
+    padding: 15px;
+  }
+
+  h1, h2 {
+    font-size: 20px;     
+    text-align: center;
+  }
+
+  input, select, textarea {
+    width: 100%;        
+    font-size: 16px;
+  }
+
+  button {
+    width: 100%;         
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .ticker-word {
+    font-size: 20px;    
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    width: 95%;
+    padding: 10px;
+  }
+
+  h1, h2 {
+    font-size: 18px;
+  }
+
+  input, select, textarea {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .ticker-word {
+    font-size: 16px;
+  }
+}
+
+    button {
+      background: #e67e22;
+      border: none;
+      padding: 10px 20px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover { background: #d35400; }
+    footer { text-align: center; margin-top: 30px; }
+    @keyframes girarDerechaIzquierda {
+      from { transform: rotateY(90deg); opacity: 0; }
+      to { transform: rotateY(0deg); opacity: 1; }
+    }
+    
